@@ -1,7 +1,8 @@
-flask>=3.0
-streamlit>=1.35
-requests>=2.31
-python-dotenv>=1.0
-GitPython>=3.1
-pydantic>=2.6
-semgrep>=1.70
+flask
+streamlit
+requests
+python-dotenv
+GitPython
+pydantic
+semgrep
+dotenv

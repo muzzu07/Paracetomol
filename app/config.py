@@ -6,6 +6,7 @@ via python-dotenv in run.py). Never hardcode secrets here.
 """
 
 import os
+import tempfile
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -19,7 +20,7 @@ class Config:
     # --- Paths ---
     BASE_DIR = BASE_DIR
     UPLOAD_DIR = BASE_DIR / "uploads"
-    TEMP_DIR = BASE_DIR / "temp"
+    TEMP_DIR = Path(os.getenv("TEMP_DIR", str(Path(tempfile.gettempdir()) / "paracetomol_temp")))
     PATCH_DIR = BASE_DIR / "patches"
     REPORT_DIR = BASE_DIR / "reports"
 
